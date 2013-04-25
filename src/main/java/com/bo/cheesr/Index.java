@@ -71,7 +71,7 @@ public class Index extends CheesrPage
     add(new Label("total", new Model()
       {
 
-      @Override
+        @Override
         public Serializable getObject()
         {
           NumberFormat nf = NumberFormat.getCurrencyInstance();
@@ -79,6 +79,18 @@ public class Index extends CheesrPage
 
         }
       }));
+
+    add(new Link("checkout")
+      {
+
+        @Override
+        public void onClick()
+        {
+
+          setResponsePage(new CheckOutPage());
+        }
+
+      });
 
   }
 }
