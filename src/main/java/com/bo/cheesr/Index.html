@@ -28,30 +28,7 @@
 				</wicket:remove>
 			</div>
 			<div id="cart">
-				<h3>Your selection</h3>
-				<table>
-					<tbody>
-						<tr wicket:id="cart">
-							<td wicket:id="name">Gouda</td>
-							<td wicket:id="price">$4.99</td>
-							<td><a href="#" wicket:id="remove">remove</a></td>
-						</tr>
-						<wicket:remove>
-							<tr>
-								<td>Emental></td>
-								<td>$1.99</td>
-								<td><a href="#">remove</a></td>
-							</tr>
-						</wicket:remove>
-					</tbody>
-					<tfoot>
-						<tr class="total">
-							<th>Total</th>
-							<td wicket:id="total">$10.97</td>
-							<td>&nbsp;</td>
-						</tr>
-					</tfoot>
-				</table>
+				<div wicket:id="shoppingcart"></div>
 				<input type="button" wicket:id="checkout" value="Check Out" />
 			</div>
 		</div>

@@ -50,6 +50,7 @@ public class CheckOutPage extends CheesrPage
         }
 
       });
+    add(new ShoppingCartPanel("shoppingcart", getCart()));
   }
 
 }
