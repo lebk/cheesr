@@ -5,27 +5,49 @@ package com.bo.cheesr;
  */
 public class Address implements java.io.Serializable
 {
-  private String zipCode;
-  private String address;
+  private Integer zipcode;
+  private String name;
+  private String street;
+  private String city;
 
-  public String getZipCode()
+  public Integer getZipcode()
   {
-    return zipCode;
+    return zipcode;
   }
 
-  public void setZipCode(String zipCode)
+  public void setZipcode(Integer zipcode)
   {
-    this.zipCode = zipCode;
+    this.zipcode = zipcode;
   }
 
-  public String getAddress()
+  public String getName()
   {
-    return address;
+    return name;
   }
 
-  public void setAddress(String address)
+  public void setName(String name)
   {
-    this.address = address;
+    this.name = name;
+  }
+
+  public String getStreet()
+  {
+    return street;
+  }
+
+  public void setStreet(String street)
+  {
+    this.street = street;
+  }
+
+  public String getCity()
+  {
+    return city;
+  }
+
+  public void setCity(String city)
+  {
+    this.city = city;
   }
 
 }
