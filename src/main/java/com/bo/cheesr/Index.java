@@ -7,6 +7,8 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
+import org.apache.wicket.markup.html.list.PageableListView;
+import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
 
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
@@ -19,7 +21,7 @@ public class Index extends CheesrPage
 
   public Index()
   {
-    add(new ListView("cheeses", getCheeses())
+    PageableListView cheeses = new PageableListView("cheeses", getCheeses(), 3)
       {
 
         @Override
@@ -41,8 +43,9 @@ public class Index extends CheesrPage
             });
         }
 
-      });
-
+      };
+    add(cheeses);
+    add(new PagingNavigator("navigator", cheeses));
     add(new ListView("cart", new PropertyModel(this, "cart.cheeses"))
       {
 
